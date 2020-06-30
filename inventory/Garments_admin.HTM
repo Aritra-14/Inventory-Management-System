@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garments Showroom</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+body {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container1 {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #FF6347;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 65px 150px 0px 150px;   /* top right bottom left*/
+  font-size: 20px;
+}
+.container2 {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #fffbb3;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px 150px 0px 150px;   /* top right bottom left*/
+}
+.tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: rgb(142, 140, 158);
+        color: #000000;
+        text-align: justify;
+        border-radius: 6px;
+        padding: 10px 10px 10px 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+</style>
+
+<body>
+    <center>
+        <img src="images/logo.png" width="75" alt="">
+        <div class="container1">
+            <center>
+                <h1 style="color:white;">Enter New Stock Details</h1>
+            </center>
+        </div>
+        <div class="container2">
+        <form action="Save" method="POST" onsubmit="return validateForm()">
+            <table width="50%">
+                <tr>
+                    <td>1. Stock ID *</td>
+                    <td><input type="text" name="StockID" maxlength="80" size="45" placeholder="SXXX" autocomplete="off" pattern="S[0-9]{3}" required>
+                    <div class="tooltip"><img src="info.png" width="25px"><span class="tooltiptext">Start with S followed by three digits</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2. Supplier ID *</td>
+                    <td><input type="text" name="SupplierID" maxlength="80" size="45" placeholder="SUPPXXX" autocomplete="off" pattern="SUPP[0-9]{3}" required>
+                    <div class="tooltip"><img src="info.png" width="25px"><span class="tooltiptext">Start with SUPP followed by three digits</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3. Supplier Name *</td>
+                    <td><input type="text" name="SupplierName" maxlength="80" size="45" placeholder="Ratan Sarkhel" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>4. Stock Description *</td>
+                    <td><input type="text" name="stock_desc" maxlength="80" size="45" placeholder="For kids" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>5. Cost Price (in INR) *</td>
+                    <td><input type="number" name="cost_price" maxlength="80" size="45" placeholder="500" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>6. Estimated Selling Price (in INR) *</td>
+                    <td><input type="number" name="estimated_selling_price" maxlength="80" size="45" placeholder="700" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>7. Total Quantities in Stock *</td>
+                    <td><input type="number" name="quantities_in_stock" maxlength="80" size="45" placeholder="Add existing stock(s) with new stock(s) and enter" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>8. Total Cost Price of Stock (in INR) *</td>
+                    <td><input type="number" name="total_cost_price" maxlength="80" size="45" placeholder="5000" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>9. Total Selling Price (in INR) *</td>
+                    <td><input type="number" name="total_selling_price" maxlength="80" size="45" placeholder="6000" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>10. Brand Name *</td>
+                    <td><input type="text" name="brand_name" maxlength="80" size="45" placeholder="Allen Solly" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td>11. Size *</td>
+                    <td><input type="text" name="size" maxlength="80" size="45" placeholder="M" autocomplete="off" required></td>
+                </tr>
+                <tr>
+                    <td colspan=2 align="center"><input type="submit" value="Insert New Data"> <input type="reset"></td>
+
+                </tr>   
+                <tr>
+                    <td colspan=2 align="center"> <a href="View">View Existing Stock</a> </td>
+                </tr>   
+       
+            </table>
+
+        </form>
+    </div>
+                
+    </center>
+</body>
+
+
+</html>

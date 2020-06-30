@@ -1,0 +1,49 @@
+<web-app>
+
+<display-name>Servlet - Entry, List Edit and Delete operation with exception</display-name>
+<description>This is entry and view operation of registration </description>
+<welcome-file-list>
+    <welcome-file>Login Page.HTM</welcome-file>
+</welcome-file-list>
+
+<servlet>
+    <servlet-name>servlet1</servlet-name>
+    <servlet-class>SaveRecord</servlet-class>
+</servlet>
+
+<servlet-mapping> 
+    <servlet-name>servlet1</servlet-name>
+    <url-pattern>/Save</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>servlet2</servlet-name>
+    <servlet-class>ViewRecord</servlet-class>
+</servlet>
+
+<servlet-mapping> 
+    <servlet-name>servlet2</servlet-name>
+    <url-pattern>/View</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>servlet3</servlet-name>
+    <servlet-class>DeleteRecord</servlet-class>
+</servlet>
+
+<servlet-mapping> 
+    <servlet-name>servlet3</servlet-name>
+    <url-pattern>/Delete</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>servlet4</servlet-name>
+    <servlet-class>EditRecord</servlet-class>
+</servlet>
+
+<servlet-mapping> 
+    <servlet-name>servlet4</servlet-name>
+    <url-pattern>/Edit</url-pattern>
+</servlet-mapping>
+
+</web-app>
